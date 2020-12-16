@@ -24,15 +24,35 @@ struct Provider: TimelineProvider {
         let jsonString = """
     {
         "items": [{
-            "tagId": "412764326395404288",
+            "tagId": "545638899972583424",
             "hottest": false,
-            "tagName": "双子座流星雨",
+            "tagName": "Boss的厨房",
+            "newest": false
+        }, {
+            "tagId": "545286050801520640",
+            "hottest": false,
+            "tagName": "追光吧哥哥",
+            "newest": false
+        }, {
+            "tagId": "545889775383482369",
+            "hottest": false,
+            "tagName": "最好笑的谐音梗",
+            "newest": true
+        }, {
+            "tagId": "544555424242741249",
+            "hottest": false,
+            "tagName": "冬日颜值大赏",
+            "newest": false
+        }, {
+            "tagId": "544125401136373760",
+            "hottest": true,
+            "tagName": "标签创建大赛",
             "newest": false
         }, {
             "tagId": "545196827075424256",
             "hottest": false,
             "tagName": "年末具有仪式感的事情",
-            "newest": true
+            "newest": false
         }, {
             "tagId": "536863962969411585",
             "hottest": false,
@@ -42,11 +62,6 @@ struct Provider: TimelineProvider {
             "tagId": "544633081923903488",
             "hottest": false,
             "tagName": "25岁之后才明白的事",
-            "newest": false
-        }, {
-            "tagId": "536123159670165505",
-            "hottest": true,
-            "tagName": "21天BetterMe生活类打卡",
             "newest": false
         }, {
             "tagId": "540190027372564481",
@@ -69,11 +84,6 @@ struct Provider: TimelineProvider {
             "tagName": "狐友国民校花十强",
             "newest": false
         }, {
-            "tagId": "437400014080184321",
-            "hottest": false,
-            "tagName": "此生最爱拍拍拍",
-            "newest": false
-        }, {
             "tagId": "411669030873612288",
             "hottest": false,
             "tagName": "双十二来啦",
@@ -94,14 +104,14 @@ struct Provider: TimelineProvider {
             "tagName": "你见过最好看的人",
             "newest": false
         }, {
-            "tagId": "543539465721753600",
-            "hottest": false,
-            "tagName": "狐友国民校花总决赛",
-            "newest": false
-        }, {
             "tagId": "523800855921569793",
             "hottest": false,
             "tagName": "当代人记忆力有多差",
+            "newest": false
+        }, {
+            "tagId": "542996287641890816",
+            "hottest": false,
+            "tagName": "如何熬过最艰难的日子",
             "newest": false
         }, {
             "tagId": "320463803068190721",
@@ -119,9 +129,34 @@ struct Provider: TimelineProvider {
             "tagName": "美食大侦探",
             "newest": false
         }, {
-            "tagId": "537593651539222528",
+            "tagId": "502415743921430528",
             "hottest": false,
-            "tagName": "秋冬掠影",
+            "tagName": "分享一个撒娇小技巧",
+            "newest": false
+        }, {
+            "tagId": "473056620616630272",
+            "hottest": false,
+            "tagName": "离婚冷静期",
+            "newest": false
+        }, {
+            "tagId": "541215280668352512",
+            "hottest": false,
+            "tagName": "绝美明星红毯大赏",
+            "newest": false
+        }, {
+            "tagId": "541202402649321472",
+            "hottest": false,
+            "tagName": "小时候拥有的天赋",
+            "newest": false
+        }, {
+            "tagId": "538786253093478401",
+            "hottest": false,
+            "tagName": "校花才艺大比拼",
+            "newest": false
+        }, {
+            "tagId": "495531064211542017",
+            "hottest": false,
+            "tagName": "一人一句流行梗",
             "newest": false
         }, {
             "tagId": "531512385328918529",
@@ -129,24 +164,44 @@ struct Provider: TimelineProvider {
             "tagName": "每天健身半小时",
             "newest": false
         }, {
+            "tagId": "540843761601613825",
+            "hottest": false,
+            "tagName": "追星心动时刻",
+            "newest": false
+        }, {
+            "tagId": "533001422845779969",
+            "hottest": false,
+            "tagName": "运动美少女养成记",
+            "newest": false
+        }, {
+            "tagId": "486827545673601024",
+            "hottest": false,
+            "tagName": "直男发言大赏",
+            "newest": false
+        }, {
+            "tagId": "540449886844235777",
+            "hottest": false,
+            "tagName": "2020年最后一个月",
+            "newest": false
+        }, {
+            "tagId": "540136217950294016",
+            "hottest": false,
+            "tagName": "我们被爱着的瞬间",
+            "newest": false
+        }, {
+            "tagId": "383526210484846592",
+            "hottest": false,
+            "tagName": "演员请就位",
+            "newest": false
+        }, {
+            "tagId": "537593651539222528",
+            "hottest": false,
+            "tagName": "秋冬掠影",
+            "newest": false
+        }, {
             "tagId": "395515030054903808",
             "hottest": false,
             "tagName": "值得一看的影视剧",
-            "newest": false
-        }, {
-            "tagId": "537594892042379264",
-            "hottest": false,
-            "tagName": "开黑了同学",
-            "newest": false
-        }, {
-            "tagId": "538722056267632641",
-            "hottest": false,
-            "tagName": "丁真",
-            "newest": false
-        }, {
-            "tagId": "542808261083009025",
-            "hottest": false,
-            "tagName": "国民校花我来猜",
             "newest": false
         }]
     }
@@ -201,23 +256,25 @@ struct yyyyEntryView : View {
                         }
                     }
             case .systemMedium:
-                let spacing = CGFloat(15.0)
+                let spacing = CGFloat(12.0)
                 let gridItem = GridItem(spacing: spacing, alignment:.leading)
                 if let items = entry.tagList?.items,let tags = items.prefix(8) {
                     let threeRows = [gridItem,gridItem,gridItem,gridItem]
-                    LazyHGrid(rows:threeRows) {
-                        ForEach(tags,id:\.tagId) { (item) in
-                            TagLineView(item:item)
-                                .frame(maxWidth: 150,alignment:.leading)
+                    GeometryReader(content: { geometry in
+                        LazyHGrid(rows:threeRows,spacing:0) {
+                            ForEach(tags,id:\.tagId) { (item) in
+                                TagLineView(item:item)
+                                    .frame(minWidth: geometry.size.width/2, alignment: .leading)
+                            }
                         }
-                    }
-//                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-                    Spacer()
+                    })
+                    
                 }
             default:
                     Text(entry.date, style: .time)
             }
-        }.padding(16)
+        }
+        .padding(16)
     }
 }
 
@@ -237,7 +294,15 @@ struct yyyy: Widget {
 
 struct yyyy_Previews: PreviewProvider {
     static var previews: some View {
-        yyyyEntryView(entry: SimpleEntry(date: Date(),tagList: nil))
+        let tagArr = [DiscoverTag(tagId: "11111111", tagName: "3333333333", hottest: true, newest: false),
+                      DiscoverTag(tagId: "11111111", tagName: "3333333333", hottest: true, newest: false),
+                      DiscoverTag(tagId: "11111111", tagName: "3333333333", hottest: true, newest: false),
+                      DiscoverTag(tagId: "11111111", tagName: "3333333333", hottest: true, newest: false),
+                      DiscoverTag(tagId: "11111111", tagName: "3333333333", hottest: true, newest: false),
+                      DiscoverTag(tagId: "11111111", tagName: "3333333333", hottest: true, newest: false),
+                      DiscoverTag(tagId: "11111111", tagName: "3333333333", hottest: true, newest: false)
+        ]
+        yyyyEntryView(entry: SimpleEntry(date: Date(),tagList: DiscoverTagList(items: tagArr)))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
