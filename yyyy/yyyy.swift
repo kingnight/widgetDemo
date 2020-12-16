@@ -184,9 +184,8 @@ struct yyyyEntryView : View {
         VStack{
             HStack{
                 Text("狐友热聊")
-                    .font(.callout)
-                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 0))
-                Spacer()
+                    .font(.title2)
+                Spacer(minLength: 100)
                 Image("icon-60")
                     .resizable()
                     .frame(width: 40, height: 40)
@@ -202,7 +201,7 @@ struct yyyyEntryView : View {
                         }
                     }
             case .systemMedium:
-                let spacing = CGFloat(10.0)
+                let spacing = CGFloat(15.0)
                 let gridItem = GridItem(spacing: spacing, alignment:.leading)
                 if let items = entry.tagList?.items,let tags = items.prefix(8) {
                     let threeRows = [gridItem,gridItem,gridItem,gridItem]
@@ -212,7 +211,7 @@ struct yyyyEntryView : View {
                                 .frame(maxWidth: 150,alignment:.leading)
                         }
                     }
-                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+//                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
                     Spacer()
                 }
             default:
@@ -239,6 +238,6 @@ struct yyyy: Widget {
 struct yyyy_Previews: PreviewProvider {
     static var previews: some View {
         yyyyEntryView(entry: SimpleEntry(date: Date(),tagList: nil))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

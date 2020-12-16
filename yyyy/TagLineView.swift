@@ -14,9 +14,10 @@ struct TagLineView: View {
     var body: some View {
         HStack(alignment: .top){
             Text(item.tagName)
-                .font(.caption2)
+                .font(.caption)
+                .fontWeight(.regular)
                 .lineLimit(1)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0))
+            
             if item.hottest {
                 Image("ic_hot_normal")
                     .resizable()
