@@ -243,8 +243,8 @@ struct yyyyEntryView : View {
                 Spacer(minLength: 100)
                 Image("icon-60")
                     .resizable()
-                    .frame(width: 40, height: 40)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
+                    .frame(width: 30, height: 30)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
             }
             switch family {
                 case .systemSmall:
@@ -256,8 +256,8 @@ struct yyyyEntryView : View {
                         }
                     }
             case .systemMedium:
-                let spacing = CGFloat(12.0)
-                let gridItem = GridItem(spacing: spacing, alignment:.leading)
+                let spacing = CGFloat(10.0)
+                let gridItem = GridItem(.flexible(minimum: 10, maximum: 20),spacing: spacing, alignment:.leading)
                 if let items = entry.tagList?.items,let tags = items.prefix(8) {
                     let threeRows = [gridItem,gridItem,gridItem,gridItem]
                     GeometryReader(content: { geometry in
@@ -274,7 +274,7 @@ struct yyyyEntryView : View {
                     Text(entry.date, style: .time)
             }
         }
-        .padding(16)
+        .padding(12)
     }
 }
 

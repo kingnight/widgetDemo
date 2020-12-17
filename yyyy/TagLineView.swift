@@ -12,14 +12,12 @@ struct TagLineView: View {
     var item: DiscoverTag
     
     var body: some View {
-        print("https://applinks.w.sohu.com/tag?tagId=\(item.tagId)&tagName=\(item.tagName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-        return Link(destination: URL(string: "https://applinks.w.sohu.com/tag?tagId=\(item.tagId)&tagName=\(item.tagName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!, label: {
+        Link(destination: URL(string: "https://applinks.w.sohu.com/tag?tagId=\(item.tagId)&tagName=\(item.tagName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!, label: {
             HStack(alignment: .top){
-//                Text(item.tagName)
-//                    .font(.caption)
-//                    .fontWeight(.regular)
-//                    .lineLimit(1)
-                Text("https://applinks.w.sohu.com/tag?tagId=\(item.tagId)&tagName=\(item.tagName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+                Text(item.tagName)
+                    .font(.subheadline)
+                    .fontWeight(.regular)
+                    .lineLimit(1)
                 if item.hottest {
                     Image("ic_hot_normal")
                         .resizable()
