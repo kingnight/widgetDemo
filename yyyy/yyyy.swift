@@ -243,8 +243,8 @@ struct yyyyEntryView : View {
                 Spacer(minLength: 100)
                 Image("icon-60")
                     .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
+                    .frame(width: 37, height: 37)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
             switch family {
                 case .systemSmall:
@@ -256,15 +256,15 @@ struct yyyyEntryView : View {
                         }
                     }
             case .systemMedium:
-                let spacing = CGFloat(10.0)
-                let gridItem = GridItem(.flexible(minimum: 10, maximum: 20),spacing: spacing, alignment:.leading)
-                if let items = entry.tagList?.items,let tags = items.prefix(8) {
-                    let threeRows = [gridItem,gridItem,gridItem,gridItem]
+                let spacing = CGFloat(12.0)
+                let gridItem = GridItem(.flexible(minimum: 10, maximum: 15),spacing: spacing, alignment:.leading)
+                if let items = entry.tagList?.items,let tags = items.prefix(6) {
+                    let threeRows = [gridItem,gridItem,gridItem]
                     GeometryReader(content: { geometry in
-                        LazyHGrid(rows:threeRows,spacing:0) {
+                        LazyHGrid(rows:threeRows,alignment:.top, spacing:14) {
                             ForEach(tags,id:\.tagId) { (item) in
                                 TagLineView(item:item)
-                                    .frame(minWidth: geometry.size.width/2, alignment: .leading)
+                                    .frame(maxWidth: geometry.size.width/2, alignment: .leading)
                             }
                         }
                     })
@@ -274,7 +274,7 @@ struct yyyyEntryView : View {
                     Text(entry.date, style: .time)
             }
         }
-        .padding(12)
+        .padding(EdgeInsets(top: 19, leading: 14, bottom: 18, trailing: 14))
     }
 }
 

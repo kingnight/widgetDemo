@@ -13,7 +13,7 @@ struct TagLineView: View {
     
     var body: some View {
         Link(destination: URL(string: "https://applinks.w.sohu.com/tag?tagId=\(item.tagId)&tagName=\(item.tagName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!, label: {
-            HStack(alignment: .top){
+            HStack{
                 Text(item.tagName)
                     .font(.subheadline)
                     .fontWeight(.regular)
