@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
     let tagId = "486827545673601024"
     let tagName = "直男发言大赏"
     var body: some View {
-        print("https://applinks.w.sohu.com/tag?tagId=\(tagId)&tagName=\(tagName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-        return Text("Hello, world!")
+        Text("Hello, world!")
             .padding()
+        Button(action:{
+            WidgetCenter.shared.reloadAllTimelines()
+        }) {
+            Text("Click")
+        }
     }
 }
 
