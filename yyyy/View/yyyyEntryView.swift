@@ -41,7 +41,7 @@ struct yyyyEntryView : View {
                         LazyHGrid(rows:threeRows,alignment:.top, spacing:14) {
                             ForEach(tags,id:\.tagId) { (item) in
                                 TagLineView(item:item)
-                                    .frame(maxWidth: geometry.size.width/2, alignment: .leading)
+                                    .frame(width: geometry.size.width/2, alignment: .leading)
                             }
                         }
                     })

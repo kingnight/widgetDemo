@@ -56,7 +56,7 @@ struct Provider: TimelineProvider {
         }, {
             "tagId": "545889775383482369",
             "hottest": false,
-            "tagName": "最好笑的谐音梗",
+            "tagName": "最好笑的",
             "newest": true
         }, {
             "tagId": "544555424242741249",
@@ -71,7 +71,7 @@ struct Provider: TimelineProvider {
         }, {
             "tagId": "545196827075424256",
             "hottest": false,
-            "tagName": "年末具有仪式感的事情",
+            "tagName": "年末具有仪式",
             "newest": false
         }, {
             "tagId": "536863962969411585",
@@ -81,17 +81,17 @@ struct Provider: TimelineProvider {
         }, {
             "tagId": "544633081923903488",
             "hottest": false,
-            "tagName": "25岁之后才明白的事",
+            "tagName": "25岁之后才",
             "newest": false
         }, {
             "tagId": "540190027372564481",
             "hottest": false,
-            "tagName": "地表最强颜值担当",
+            "tagName": "地表最强",
             "newest": false
         }, {
             "tagId": "544449301904896001",
             "hottest": false,
-            "tagName": "我最期待的一部电影",
+            "tagName": "我最期待",
             "newest": false
         }, {
             "tagId": "538774446022860800",
@@ -101,7 +101,7 @@ struct Provider: TimelineProvider {
         }, {
             "tagId": "543944566630264833",
             "hottest": false,
-            "tagName": "狐友国民校花十强",
+            "tagName": "狐友国民",
             "newest": false
         }, {
             "tagId": "411669030873612288",
